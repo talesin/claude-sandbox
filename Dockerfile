@@ -76,7 +76,8 @@ ENV PATH="/home/claude/.local/bin:$PATH"
 # is a reasonable tradeoff.
 ENV CLAUDE_CODE_SUBPROCESS_ENV_SCRUB=0 \
     CLAUDE_CODE_CERT_STORE=bundled \
-    CLAUDE_CODE_DISABLE_CRON=1
+    CLAUDE_CODE_DISABLE_CRON=1 \
+    REFERENCES=/references
 
 # 10. Claude instructions and settings — most volatile, always last
 COPY --chown=claude:claude container-files/CLAUDE-root.md /home/claude/.claude/CLAUDE.md
